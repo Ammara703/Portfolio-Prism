@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none !important;
+}
+a:-webkit-any-link {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+p,
+li {
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+
+/* _____________UTILITY CLASSES______________ */
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+
+  margin: 10rem auto;
+  background: #faf9f6;
+  padding: 2rem;
+  box-shadow: 0px 5px 10px 0px #aaaaaa;
+}
+
+.lg-heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.md-heading {
+  font-size: 2.2rem;
+}
+
+.text-red {
+  color: #ff4545;
+}
+
+.text-black {
+  color: #1e1c1c;
+}
+
+.text-grey {
+  color: #555555;
+}
+.text-light {
+  color: #fff;
+}
+
+.btn1 {
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.5em 1.5em;
+  text-transform: capitalize;
+  margin: 1em 0;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.btn2 {
+  background-color: #ff4545;
+  border: 1px solid #ff4545;
+  border-radius: 0.2em;
+  color: #fff;
+}
+.btn2:hover {
+  background-color: #d62727;
+  border: 1px solid #d62727;
+}
+
+/* ____________________________navbar styling_________________________________ */
+nav {
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 6;
+  padding: 0 5rem;
+}
+nav p {
+  font-weight: 700;
+  font-size: 2rem;
+
+  color: #fff;
+}
+
+nav ul li a:hover {
+  border-bottom: 1px solid #fff;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  padding-right: 3rem;
+}
+
+/* ____________________________hero section styling_________________________________*/
+
+.header {
+  overflow: hidden;
+  background-image: url("./assets/pexels-danny-meneses-340146-943096.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+.hero_section {
+  max-width: 700px;
+  max-height: 500px;
+  /* margin: 10rem; */
+  /* padding: 5rem; */
+  margin: 25rem 10rem;
+  text-align: center;
+}
+
+/* ____________________________about section styling_________________________________*/
+
+.about {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  height: 75vh;
+}
+.about img {
+  width: 100%;
+  flex: 1 1 50%;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+.about_content {
+  flex: 1 1 50%;
+}
+
+/* ____________________________combine styling for project and Achievements styling_________________________________*/
+.showcase-section {
+  margin: 2rem 0 2rem 0;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.showcase-heading {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase-heading::before,
+.showcase-heading::after {
+  content: "";
+  flex-grow: 1;
+  border-bottom: 2px solid #ff4545;
+  max-width: 50px;
+  margin: 0 10px;
+}
+
+.showcase-card {
+  position: relative;
+  height: 350px;
+  width: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 0 1rem 3.5rem;
+  padding: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.showcase-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 5px;
+}
+.showcase-card:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  .showcase-overlay {
+    opacity: 1;
+    bottom: 0%;
+  }
+}
+.showcase-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: -100%;
+  left: 0%;
+  opacity: 0;
+  color: #ff4545;
+  transition: all 0.3s ease-in-out;
+  /* background-color: rgba(255, 192, 203, 0.5); */
+  background-color: rgb(255, 255, 255, 0.4);
+  box-shadow: 0 4px 30px rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+}
+
+.showcase-overlay a i {
+  font-size: 25px;
+  text-align: center;
+  float: right;
+  padding: 3rem 2rem 0 0;
+}
+.showcase-overlay a i:hover {
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
+}
+.showcase-overlay h1 {
+  position: absolute;
+  width: 100%;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: 25px !important; /* Adjust the size of the arrow icon */
+  color: #ff0000 !important; /* Change this to your desired color */
+}
+
+.slick-next {
+  right: 0px !important; /* Distance from the right edge of the carousel */
+}
+.slick-prev {
+  left: -5px !important; /* Distance from the right edge of the carousel */
+  z-index: 2;
+}
+
+.certificate-img {
+  object-fit: contain;
+}
+.certificate-card {
+  height: 250px;
+  width: 300px;
+}
+
+/* ____________________________tools styling_________________________________*/
+#Tools {
+  text-align: center;
+  /* background: url("./assets/BG_IMAGE.png");
+
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+.tools_heading {
+  margin-bottom: 2rem;
+}
+.tools-img {
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem;
+}
+.tools-img:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black;  */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  font-size: 1.1rem;
+  width: 85px;
+  background-color: rgba(255, 192, 203, 0.5);
+  color: #1e1c1c;
+  border-bottom: 4px solid #ff4545;
+  text-align: center;
+  padding: 0.3rem 0;
+  border-radius: 6px;
+  font-weight: 500;
+  position: absolute;
+  z-index: 1;
+  top: -8px;
+  left: 20%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: #ff4545 transparent transparent transparent;
+}
+
+/* ____________________________contact styling_________________________________*/
+.contact {
+  display: flex;
+}
+
+.contact-side {
+  padding: 2rem;
+  align-items: center;
+  align-self: center;
+}
+.contact-info {
+  margin-bottom: 3.5rem;
+}
+.contact-info i {
+  color: #ff4545;
+  font-size: 2rem;
+}
+.contact-form {
+  border: 3px solid red;
+  margin: 2rem;
+  flex: 1 1 500px;
+  padding: 1rem;
+  align-self: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+  background: #fff;
+}
+.contact-form h1 {
+  text-transform: capitalize;
+}
+.contact-form p {
+  margin-bottom: 2rem;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  border: none;
+  background: none;
+  border-bottom: 2px solid #555555;
+  /* height: 3rem; */
+  margin: 1rem 0;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+.contact-form textarea[id="message"] {
+  margin: 1rem 0;
+  height: 10rem;
+  width: 70%;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: 2px solid #555555;
+}
+
+.contact-form input[type="button"] {
+  padding: 0.5em 1rem;
+  font-size: 1.3rem;
+}
+/* ____________________________footer section styling_________________________________*/
+.footer {
+  display: flex;
+  padding: 1rem 4rem;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.footer-head {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+.footer-icons i {
+  font-size: 1.7rem;
+  padding: 1rem 2rem;
+  align-content: center;
+}
+.footer-para {
+  align-content: center;
+  margin-left: auto;
+}
+.footer-icons i:hover {
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
+}

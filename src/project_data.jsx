@@ -1,0 +1,51 @@
+export default [
+  {
+    id: 1,
+    img: "./website_images/icescop.png",
+    h1: "Ice Scoop",
+    view: "https://icescoop.netlify.app/",
+    github: "https://github.com/Ammara703/IceCream-Website",
+  },
+  {
+    id: 2,
+    img: "./website_images/wazwan.png",
+    h1: "Wazwan",
+    view: "https://wazwan-kashmiri-cusine.netlify.app/",
+    github: "https://github.com/Ammara703/my-food-website",
+  },
+  {
+    id: 3,
+    img: "./website_images/travelNorth.png",
+    h1: "North Travel",
+    view: "https://north-travel.netlify.app/",
+    github: "https://github.com/Ammara703/my-travel-website",
+  },
+  {
+    id: 4,
+    img: "./website_images/travel_journal.png",
+    h1: "Travel Journal",
+    view: "https://travel-tales-diary.netlify.app/",
+    github: "https://github.com/Ammara703/my-travel-journal",
+  },
+  {
+    id: 5,
+    img: "./website_images/devdesk.png",
+    h1: "Dev Desk",
+    view: "https://dev-desk.netlify.app/",
+    github: "https://github.com/Ammara703/Learning-Website",
+  },
+  {
+    id: 6,
+    img: "./website_images/form.png",
+    h1: "Resort Registration",
+    view: "https://resort-registration.netlify.app/",
+    github: "https://github.com/Ammara703/Registration-Form",
+  },
+  {
+    id: 7,
+    img: "./website_images/iceland.png",
+    h1: "IceLand",
+    view: "https://ice-land.netlify.app/ ",
+    github: "https://github.com/Ammara703/Glassmorphism-Design",
+  },
+];
